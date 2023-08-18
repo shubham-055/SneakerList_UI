@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {FlatList, Image, SafeAreaView, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View} from 'react-native';
 import {Menu, Sneaker1, Search, Icon1, Icon2,Sneaker2,Sneaker3,Sneaker4,Sneaker5,Sneaker6,Heart,Heart2} from './Assets/SVG';
+import Color from './Assets/ColorsUI/Color'
 
 const App = () => {
   return (
@@ -41,7 +42,7 @@ const List = () => {
       subheadhing: 'Air Force 1 Jester XX Black Sonic Yellow ...',
       image: <Sneaker1 />,
       price: '$96',
-      heart: <Heart />,
+      
     },
     {
       id: 2,
@@ -49,7 +50,7 @@ const List = () => {
       subheadhing: 'Run Star Hike Three Color Unisex',
       image: <Sneaker2 />,
       price: '$85.5',
-      heart: <Heart />,
+      
     },
     {
       id: 3,
@@ -57,7 +58,7 @@ const List = () => {
       subheadhing: 'Air Jordan 1 Retro High Obsidian UNC ',
       image: <Sneaker3 />,
       price: '$196',
-      heart: <Heart />,
+      
     },
     {
       id: 4,
@@ -65,7 +66,7 @@ const List = () => {
       subheadhing: 'Air Force 1 Jester XX Black Sonic Yellow ...',
       image: <Sneaker4 />,
       price: '$115',
-      heart: <Heart />,
+      
     },
     {
       id: 5,
@@ -73,7 +74,7 @@ const List = () => {
       subheadhing: 'Air Force 1 Jester XX Black Sonic Yellow ...',
       image: <Sneaker5 />,
       price: '$96',
-      heart: <Heart />,
+      
     },
     {
       id: 6,
@@ -81,7 +82,7 @@ const List = () => {
       subheadhing: 'Air Force 1 Jester XX Black Sonic Yellow ...',
       image: <Sneaker6 />,
       price: '$96',
-      heart: <Heart />,
+      
     },
     {
       id: 7,
@@ -89,7 +90,7 @@ const List = () => {
       subheadhing: 'Air Force 1 Jester XX Black Sonic Yellow ...',
       image: <Sneaker1 />,
       price: '$96',
-      heart: <Heart />,
+      
     },
     {
       id: 8,
@@ -97,7 +98,7 @@ const List = () => {
       subheadhing: 'Run Star Hike Three Color Unisex',
       image: <Sneaker2 />,
       price: '$85.5',
-      heart: <Heart />,
+      
     },
     {
       id: 9,
@@ -105,7 +106,7 @@ const List = () => {
       subheadhing: 'Air Jordan 1 Retro High Obsidian UNC ',
       image: <Sneaker3 />,
       price: '$196',
-      heart: <Heart />,
+      
     },
     {
       id: 10,
@@ -113,7 +114,7 @@ const List = () => {
       subheadhing: 'Air Force 1 Jester XX Black Sonic Yellow ...',
       image: <Sneaker4 />,
       price: '$115',
-      heart: <Heart />,
+      
     },
   ];
   return (
@@ -180,14 +181,13 @@ const Searchbar = () => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#F2F2F2',
+    backgroundColor: Color.lightCream,
   },
   searchbar: {
     flex: 1,
     flexDirection: 'row',
     marginTop: '2.5%',
     marginHorizontal: '5%',
-    // backgroundColor: 'cyan',
     alignItems: 'center',
   },
   menu: {
@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     flex: 6,
     flexDirection: 'row',
     borderRadius: 12,
-    backgroundColor: 'white',
+    backgroundColor: Color.white,
     height: '80%',
     alignItems: 'center',
   },
@@ -210,11 +210,10 @@ const styles = StyleSheet.create({
     
   },
   searchproduct: {
-    color: '#8B8B8B',
+    color: Color.lightGrey,
     fontSize: 16,
     fontFamily: 'Bilo',
     fontWeight: '400',
-    //wordWrap: 'break-word',
     marginLeft: '5%',
   },
   header: {
@@ -234,28 +233,26 @@ const styles = StyleSheet.create({
   icons: {
     flexDirection: 'row',
     justifyContent: 'flex-end',
-    //alignContent: 'flex-end',
+    
   },
   sneakerhead: {
-    color: 'black',
+    color: Color.black,
     fontSize: 30,
     fontFamily: 'Montserrat',
     fontWeight: '800',
-    //wordWrap: 'break-word',
     justifyContent: 'flex-start',
   },
   products: {
     flex: 4,
     flexDirection: 'row',
-    // backgroundColor: 'cyan',
-    //alignItems: 'center',
   },
   productstext: {
-    color: 'black',
+    color: Color.black,
     fontSize: 16,
     fontFamily: 'Bilo',
     fontWeight: '400',
-    //wordWrap: 'break-word',
+    flexWrap:'wrap',
+  
   },
   list: {
     flex: 12,
@@ -263,20 +260,23 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 12,
-    paddingLeft: 20,
-    paddingTop: 20,
+    paddingTop: 4,
+    marginLeft:'5%',
+   
   },
   card: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: Color.white,
     marginBottom: 20,
-    marginRight: 20,
+    marginRight:15,
+    
     borderRadius: 15,
   },
   shoes: {
-    justifyContent:'center',
-    paddingHorizontal: 15,
-    paddingTop: 35,
+   justifyContent:'flex-end',
+    alignItems:'center',
+  
+    
   },
   heart: {
     position: 'absolute',
@@ -303,12 +303,11 @@ const styles = StyleSheet.create({
   },
   upper:{
     flex:1,
-    flexDirection:'row',
-    //backgroundColor:'green'
+    justifyContent:'flex-end',
   },
   lower:{
     flex:1,
-   // backgroundColor:'yellow'
+    justifyContent:'flex-end',
   }
 });
 
